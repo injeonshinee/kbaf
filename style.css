@@ -20,6 +20,16 @@ h3 {
   color: grey;
 }
 
+h4 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
 #searchBar {
   width: 100%;
   padding: 10px;
@@ -49,7 +59,7 @@ h3 {
 
 .item p {
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .item:hover {
@@ -86,3 +96,4 @@ h3 {
   color: inherit;
   background-color: #f0f0f0;
 }
+
