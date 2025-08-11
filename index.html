@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>케이뷰티앤패션</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h3>쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</h3>
+    <h1>케이뷰티앤패션</h1>
+    <input type="text" id="searchBar" placeholder="제목으로 검색하기...">
+
+    <div id="itemList">
+
+      <div id="itemList">
+      <a href="https://link.coupang.com/a/cFIu48" class="item" target="_blank">
+        <img src="images/001.jpg" alt="아이템1">
+        <p>[001] 썬피크 욕실 무타공 드라이기 거치대</p>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const items = document.querySelectorAll('.item');
+
+    searchBar.addEventListener('input', function() {
+      const keyword = this.value.toLowerCase();
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(keyword) ? 'flex' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
