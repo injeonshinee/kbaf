@@ -13,18 +13,54 @@
     <h1>케이뷰티앤패션</h1>
     <input type="text" id="searchBar" placeholder="제목으로 검색하기...">
 
+
+
+
+
+
+
+
     <div id="itemList">
-
-      <div id="itemList">
-      <a href="https://link.coupang.com/a/cFIu48" class="item" target="_blank">
-        <img src="images/001.jpg" alt="아이템1">
-        <p>[001] 썬피크 욕실 무타공 드라이기 거치대</p>
+      <a href="https://link.coupang.com/a/cJ0rkD" class="item" target="_blank">
+        <img src="images/002.png" alt="아이템1">
+        <div>
+        <h4>티파니가 음영 넣을 때 쓰는 아이섀도우</h4>
+        <p>[002] 샤넬 아이섀도우 레 꺄트르 옹브르 308호 끌레르 옵스뀌</p>
+        </div>
       </a>
-
     </div>
+
+    <div id="itemList">
+      <a href="https://link.coupang.com/a/cJ0pYD" class="item" target="_blank">
+        <img src="images/001.png" alt="아이템1">
+        <div>
+        <h4>티파니가 빵꾸날 때까지 쓴 아이섀도우</h4>
+        <p>[001] 샤넬 레 베쥬 헬시 글로우 내추럴 아이섀도우 팔레트 탠더</p>
+        </div>
+      </a>
+    </div>
+
+
+    
+
   </div>
 
   <script>
+  const searchBar = document.getElementById('searchBar');
+  const items = document.querySelectorAll('.item');
+
+  searchBar.addEventListener('input', function() {
+    const keywords = this.value.toLowerCase().trim().split(/\s+/); // 띄어쓰기 기준 단어 나누기
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      const isMatch = keywords.every(kw => text.includes(kw)); // 모든 키워드 포함 여부
+      item.style.display = isMatch ? 'flex' : 'none';
+    });
+  });
+</script>
+
+
+  <!-- <script>
     const searchBar = document.getElementById('searchBar');
     const items = document.querySelectorAll('.item');
 
@@ -35,7 +71,7 @@
         item.style.display = text.includes(keyword) ? 'flex' : 'none';
       });
     });
-  </script>
+  </script> -->
 
 </body>
 </html>
