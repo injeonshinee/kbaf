@@ -66,33 +66,71 @@ h4 {
   background-color: #f9f9f9;
 }
 
+
+
+
+
+.longCardList {
+  display: flex;
+  gap: 10px;              /* 카드 사이 간격 */
+  justify-content: space-between;
+}
+
+.longCardList .item {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc((100% - 10px) / 2); /* 두 개 카드 폭 합 + 간격이 100% */
+  height: auto;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.longCardList .item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 기본 설정은 그대로 두고 이 부분만 추가 또는 수정 */
 
-#itemList a.item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.itemList a.item {
   text-decoration: none; /* 밑줄 없애기 */
   color: inherit;        /* 부모 글자색 상속 */
   transition: background-color 0.3s;
 }
 
 /* 방문 후에도 색상 유지 */
-#itemList a.item:visited {
+.itemList a.item:visited {
   color: inherit;
 }
 
 /* 마우스 오버 효과 */
-#itemList a.item:hover {
+.itemList a.item:hover {
   background-color: #f9f9f9;
 }
 
 /* 클릭시 눌림 효과도 초기화 */
-#itemList a.item:active {
+.itemList a.item:active {
   color: inherit;
   background-color: #f0f0f0;
 }
